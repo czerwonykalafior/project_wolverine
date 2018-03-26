@@ -1,7 +1,7 @@
 # Project Wolverine
 
 Find selectors based on given sample.
-Robots could heal itself using data already scraped.
+Robot could heal itself using data already scraped.
 
 
 Current state:
