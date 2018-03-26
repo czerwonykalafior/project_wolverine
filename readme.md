@@ -12,6 +12,7 @@ Ideal state works, everything else fails.
 Use to open dom_graph.graphml :        
 https://www.yworks.com/yed-live/
 
+LCA https://en.wikipedia.org/wiki/Lowest_common_ancestor
 
 TODO: Selector for whole list
       Get The Lowest Common Ancestor (LCA) of all items from expected values and get a selector for it.
