@@ -4,10 +4,11 @@ import pandas as pd
 import requests
 
 # CONF:
-ONLINE = False
+ONLINE = True
 
 
 def get_all_parents(html_element):
+
 
     if html_element is None:
         return []
@@ -27,7 +28,7 @@ def common_elements(list_1, list_2):
 
 
 def offline_web_test(file_path):
-    with open(file_path, 'r') as raw_html:
+    with open(file_path, encoding="utf8") as raw_html:
         html_sample = raw_html.read()
         return html_sample
 
@@ -40,7 +41,7 @@ def find_selectors(url, expected_values_csv):
 
     # Init dict with results
     field_selectors = {k: '' for k in fields}
-    # print(field_selectors)
+    print(field_selectors)
 
     # Get the HTML - Online / Offline testing
     if ONLINE:
@@ -88,7 +89,6 @@ def find_selectors(url, expected_values_csv):
 if __name__ == '__main__':
 
 
-
     location_url = 'https://www.patek.com/en/retail-service/authorized-retailers'
     expected_values_input = 'sample_expected_data.csv'
 
@@ -96,19 +96,4 @@ if __name__ == '__main__':
     # print('\nSelectors: ', r)
 
 
-# TODO: Selector for whole list
-#       Get The Lowest Common Ancestor (LCA) of all items from expected values and get a selector for it.
-#
-# TODO: Selector for one item
-#       Get LCA of all fields in each item and get a selector for it.
-#       CASE_1:
-#           Items's values could be ALSO found in not the "item node",
-#           than there will be more than one LCA for given item's values.
-#           SOLUTION:
-#           Real LCA will be the shortest path from given node.
-# TODO: Selectors for each filed
-#       Get the selector for each value in the item.
-#       CASE_1:
-#           The same value in different item OR/AND somewhere else in html.
-#           SOLUTION:
-#
+
