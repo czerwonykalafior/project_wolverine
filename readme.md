@@ -1,3 +1,18 @@
+# Project Wolverine
+
+Find selectors based on given sample.
+Robots could heal itself using data already scraped.
+
+
+Current state:
+
+Locations on flat list. Each loc has some common attribute. 
+Ideal state works, everything else fails.
+ 
+Use to open dom_graph.graphml :        
+https://www.yworks.com/yed-live/
+
+
 TODO: Selector for whole list
       Get The Lowest Common Ancestor (LCA) of all items from expected values and get a selector for it.
 
